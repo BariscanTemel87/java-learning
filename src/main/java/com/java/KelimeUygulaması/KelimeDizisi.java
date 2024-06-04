@@ -35,7 +35,6 @@ public class KelimeDizisi{
         System.out.println("Oluşturulan rastgele metin: " + randomText);
     }
 
-    // Bir kelimenin tekrarlı harf içerip içermediğini kontrol eden yardımcı metot
     private static boolean hasRepeatedChars(String word) {
         Set<Character> charSet = new HashSet<>();
         for (char c : word.toCharArray()) {
