@@ -16,7 +16,7 @@ public class KelimeDizisi{
         for (String kelime : kelimeler) {
             if (hasRepeatedChars(kelime)) {
                 System.out.println("Tekrarlı harf içeren kelime: " + kelime);
-                for (char c : kelime.toCharArray()) {
+                for (char c :  kelime.toCharArray()) {
                     charList.add(c);
                 }
                 count++;
@@ -35,6 +35,7 @@ public class KelimeDizisi{
         System.out.println("Oluşturulan rastgele metin: " + randomText);
     }
 
+    // Bir kelimenin tekrarlı harf içerip içermediğini kontrol eden yardımcı metot
     private static boolean hasRepeatedChars(String word) {
         Set<Character> charSet = new HashSet<>();
         for (char c : word.toCharArray()) {
