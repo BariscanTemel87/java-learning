@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MaasHesaplamaTestSuite">
+    <test name="MaasHesaplamaTest">
+        <classes>
+            <class name="com.java.MaasHesaplamaUygulaması.MaasHesaplamaTest"/>
+        </classes>
+    </test>
+    <test name="MaasHesaplamaDataProviderTest">
+        <classes>
+            <class name="com.java.MaasHesaplamaUygulaması.MaasHesaplamaDataProviderTest"/>
+        </classes>
+    </test>
+</suite>
+
