@@ -4,11 +4,8 @@ package com.java.SingeltonAndBuilder;
  * Singleton ve Builder Tasarım Desenleri
  */
 public class Product {
-    // Required parameters
     private String name;
     private double price;
-
-    // Optional parameters
     private String description;
     private int quantity;
 
@@ -19,19 +16,20 @@ public class Product {
         this.quantity = builder.quantity;
     }
 
+    public static ProductBuilder ProductBuilder() {
+        return new ProductBuilder();
+    }
+
     public static class ProductBuilder {
         private String name;
         private double price;
         private String description;
         private int quantity;
 
-        public ProductBuilder() {}
-
-        public static ProductBuilder builder(String name, double price) {
-            ProductBuilder builder = new ProductBuilder();
-            builder.name = name;
-            builder.price = price;
-            return builder;
+        public ProductBuilder builder(String name, double price) {
+            this.name = name;
+            this.price = price;
+            return this;
         }
 
         public ProductBuilder setDescription(String description) {
@@ -51,6 +49,11 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product [name=" + name + ", price=" + price + ", description=" + description + ", quantity=" + quantity + "]";
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", description='" + description + '\'' +
+                ", quantity=" + quantity +
+                '}';
     }
 }

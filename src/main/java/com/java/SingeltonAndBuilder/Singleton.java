@@ -21,3 +21,4 @@ public class Singleton {
         System.out.println("Herkese Merhaba!");
     }
 }
+
